@@ -1,0 +1,4 @@
+interface:
+  display_name: "bukenglaoshi-editable-courseware"
+  short_description: "按课堂讲述制作卡通课件：一页一动作、全册单栏，元素层级动画单击逐层出现，无副标题及页眉页脚页码"
+  default_prompt: "请使用 $bukenglaoshi-editable-courseware，按本次教学设计的课堂讲述和参考风格制作课件，一页一个教学动作，全册单栏纵向，无副标题、页眉、页脚、页码；给页面文字等元素加层级动画，按讲述顺序逐层出现、单击触发、不一屏全显，答案后置，禁止自动播放；输出要求的整图或可编辑PPT。"
