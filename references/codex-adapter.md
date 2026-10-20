@@ -8,7 +8,11 @@
 
 先落实[教学页面规则](teaching-page-rules.md)，再把page-plan转成plan.json。每页保留student_action、immediate_output、teaching_design_source、classroom_wording与exact_text的对应关系，可直接放入slides[]的同名元数据，也可保留在关联page-plan中；课堂完整讲述与提示映射到notes。上屏只保留当下动作所需内容，不按商业演示模板追加副标题、页眉页脚、页码或导航。
 
+每页附page_type（[版面底版](page-chassis.md)第五节的七种之一），其版位随页型确定；同一页型在全册内的主板坐标偏差≤1%。
+
 文本对象建议附role，区分title、task、material、scaffold、feedback与material_label；title每页至多一个，可为零。不得生成subtitle、header、footer或page_number职责的对象。layout记录单栏中由上到下的次序，不用左右正文栏或并排任务卡；图解作为一个材料块保留内部必要空间关系。
+
+elements的从底到顶顺序按[版面底版](page-chassis.md)的五层排：底图层 → 内容板层 → 内容层 → 锚点层 → 标注层。底图层对象不含文字；锚点层的立绘与正文对象的包围盒不重叠。排完逐页核对该文件第三节的量化上限（字号占画布高的百分比、行数、对象数、语义色数等），超限先拆页，不改小fontSize。
 
 这些元数据用于设计和人工复核，当前基础构建器会忽略未使用的附加字段，并未据此自动验证教学规则。必须对照设计单和最终渲染完成quality.md中的教学验收，不能以脚本成功代替。
 
